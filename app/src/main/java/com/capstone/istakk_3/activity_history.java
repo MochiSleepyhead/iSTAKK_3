@@ -19,26 +19,6 @@ public class activity_history extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        nav = findViewById(R.id.bottomNavigationView);
-        nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                if (item.getItemId() == R.id.dashboard) {
-                    Intent intent = new Intent(nav.getContext(), activity_dashboard.class);
-                    startActivity(intent);
-                } else if (item.getItemId() == R.id.history) {
-                    Intent intent = new Intent(nav.getContext(), activity_history.class);
-                    startActivity(intent);
-                } else if (item.getItemId() == R.id.inventory) {
-                    Intent intent = new Intent(nav.getContext(), activity_inventory.class);
-                    startActivity(intent);
-                } else {
-
-                }
-
-                return true;
-            }
-        });
     }
-    }
+}

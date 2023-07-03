@@ -1,6 +1,5 @@
 package com.capstone.istakk_3;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,7 +14,6 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
-    BottomNavigationView nav;
 
 
     @Override
@@ -23,26 +21,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        nav = findViewById(R.id.bottomNavigationView);
-        nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                if (item.getItemId() == R.id.dashboard) {
-                    Intent intent = new Intent(nav.getContext(), activity_dashboard.class);
-                    startActivity(intent);
-                } else if (item.getItemId() == R.id.history) {
-                    Intent intent = new Intent(nav.getContext(), activity_history.class);
-                    startActivity(intent);
-                } else if (item.getItemId() == R.id.inventory) {
-                    Intent intent = new Intent(nav.getContext(), activity_inventory.class);
-                    startActivity(intent);
-                } else {
-
-                }
-
-                return true;
-            }
-        });
     }
 }
